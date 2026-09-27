@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { MercadoPagoConfig, Preference } from "mercadopago";
-import { getProduct } from "@/lib/products";
+import { products } from "@/lib/products";
 
 export const runtime = "nodejs";
 
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     // IMPORTANTE: o preço é buscado no servidor.
     // Nunca confie no preço enviado pelo navegador.
     const mpItems = items.map((cartItem) => {
-      const product = getProduct(cartItem.id);
+      const product = products.find((p) => p.id === cartItem.id);
       const quantity = Math.max(1, Math.min(20, Number(cartItem.quantity) || 1));
 
       if (!product) {
