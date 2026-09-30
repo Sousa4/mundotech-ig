@@ -15,9 +15,9 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "powerbank-solar",
-    name: "Power Bank Solar Peining 10000mAh",
-    price: 119.90,
-    oldPrice: 179.90,
+    name: "Power Bank 10000mAh Solar",
+    price: 100.00,
+    oldPrice: 150.00,
     category: "Cabos e Acessórios",
     image: "/produtos/powerbank-caixa.jpeg",
     images: [
@@ -31,8 +31,8 @@ export const products: Product[] = [
   },
   {
     id: "balanca-digital",
-    name: "Balança Digital de Precisão",
-    price: 29.90,
+    name: "Balança de Bolso",
+    price: 35.90,
     oldPrice: 49.90,
     category: "Utilidades",
     image: "/produtos/balanca-caixa.jpeg",
@@ -46,9 +46,9 @@ export const products: Product[] = [
   },
   {
     id: "carregador-portatil",
-    name: "Carregador Portátil Compacto",
-    price: 49.90,
-    oldPrice: 79.90,
+    name: "Carregador Hmaston Turbo",
+    price: 15.00,
+    oldPrice: 25.00,
     category: "Cabos e Acessórios",
     image: "/produtos/carregador-caixa.jpeg",
     images: [
@@ -62,7 +62,7 @@ export const products: Product[] = [
   {
     id: "fonte-veicular-hmaston",
     name: "Fonte Veicular Hmaston Turbo",
-    price: 19.90,
+    price: 19.99,
     oldPrice: 35.00,
     category: "Cabos e Acessórios",
     image: "/produtos/hmaston-caixa.jpeg",
@@ -77,9 +77,9 @@ export const products: Product[] = [
   },
   {
     id: "maquina-cortar-cabelo",
-    name: "Máquina de Cortar Cabelo Sem Fio",
-    price: 59.90,
-    oldPrice: 99.90,
+    name: "Máquina de Cortar Cabelo",
+    price: 19.99,
+    oldPrice: 29.99,
     category: "Periféricos",
     image: "/produtos/maquina-cabelo.jpeg",
     images: [
@@ -91,9 +91,9 @@ export const products: Product[] = [
   },
   {
     id: "lanterna-tatica",
-    name: "Lanterna Tática Recarregável",
-    price: 39.90,
-    oldPrice: 69.90,
+    name: "Lanterna de Cabeça LED COB Bomvink",
+    price: 32.90,
+    oldPrice: 49.90,
     category: "Utilidades",
     image: "/produtos/lanterna-caixa.jpeg",
     images: [
@@ -107,9 +107,9 @@ export const products: Product[] = [
   },
   {
     id: "microfone-sem-fio",
-    name: "Microfone de Lapela Sem Fio",
-    price: 79.90,
-    oldPrice: 120.00,
+    name: "Microfone de Lapela Sem Fio Peining",
+    price: 75.00,
+    oldPrice: 110.00,
     category: "Áudio",
     image: "/produtos/microfone-caixa.jpeg",
     images: [
@@ -123,9 +123,9 @@ export const products: Product[] = [
   },
   {
     id: "rastreador-bluetooth",
-    name: "Rastreador Inteligente Bluetooth",
+    name: "Localizador iTag IOS Peining",
     price: 35.00,
-    oldPrice: 59.90,
+    oldPrice: 55.00,
     category: "Periféricos",
     image: "/produtos/rastreador-caixa.jpeg",
     images: [
@@ -136,4 +136,4 @@ export const products: Product[] = [
     rating: 4.5,
     reviews: 14
   }
-];
+]
