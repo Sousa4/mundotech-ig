@@ -550,4 +550,4 @@ export default function Store() {
       </footer>
     </div>
   );
-}/
+}
