@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ShoppingCart, Search, ShieldCheck, Truck, Plus, Star, X, MessageCircle, Video, Users, Sparkles, Store as StoreIcon, ChevronLeft, ChevronRight, ArrowRight, Compass, Zap, Radio, MapPin } from "lucide-react";
+import { ShoppingCart, Search, ShieldCheck, Truck, Plus, Star, X, MessageCircle, Video, Users, Sparkles, Store as StoreIcon, ChevronLeft, ChevronRight, ArrowRight, Compass, Zap, Radio } from "lucide-react";
 import { products, Product } from "../lib/products";
 
 export default function Store() {
@@ -69,7 +69,7 @@ export default function Store() {
   };
 
   const openWhatsAppGeneral = (customText?: string) => {
-    const text = customText || "Olá MundoTech.ig! Vim pelo site e quero saber mais sobre os produtos e entrega em Vitória da Conquista.";
+    const text = customText || "Olá MundoTech.ig! Vim pelo radar tecnológico da loja e quero saber mais sobre os produtos e entrega em Vitória da Conquista.";
     window.open(`https://wa.me/5577988755324?text=${encodeURIComponent(text)}`, "_blank");
   };
 
@@ -105,9 +105,15 @@ export default function Store() {
               <h1 className="text-xl lg:text-2xl font-black tracking-widest bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent drop-shadow">
                 MUNDO TECH
               </h1>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Online 24H</span>
+              <div className="flex items-center gap-2 flex-wrap">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Online 24H</span>
+                </div>
+                <span className="text-slate-600 text-[10px]">•</span>
+                <span className="text-[9px] text-cyan-300/90 font-medium tracking-wide">
+                  Localização em Vitória da Conquista • Entrega Rápida
+                </span>
               </div>
             </div>
           </div>
@@ -185,7 +191,7 @@ export default function Store() {
         
         {activeTab === "store" ? (
           <>
-            {/* HERO SECTION FUTURISTA COM OS NOVOS WIDGETS DE CONQUISTA E ONLINE 24H */}
+            {/* HERO SECTION FUTURISTA */}
             <section className="relative bg-gradient-to-b from-slate-900/80 to-slate-950 border border-cyan-500/20 rounded-3xl p-8 md:p-14 overflow-hidden text-center shadow-2xl backdrop-blur-md">
               <div className="absolute inset-0 z-0 opacity-20">
                 <img 
@@ -197,43 +203,20 @@ export default function Store() {
               </div>
 
               <div className="relative z-10 max-w-3xl mx-auto space-y-6 flex flex-col items-center">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-full text-xs font-bold uppercase tracking-widest shadow-inner">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Online 24H • Atendimento Contínuo
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 rounded-full text-xs font-bold uppercase tracking-widest shadow-inner">
+                  <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-spin" /> A Nova Era dos Acessórios
                 </span>
                 
                 <h2 className="text-3xl md:text-5xl font-black text-slate-100 leading-tight">
-                  Tecnologia de Ponta com <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Entrega Rápida em Conquista</span>
+                  Inovação, estilo e preço imbatível na <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">MundoTech</span>
                 </h2>
 
                 <p className="text-slate-400 text-sm max-w-xl">
-                  Encontre os melhores hardwares e acessórios. Fazemos entrega rápida em qualquer lugar de Vitória da Conquista - BA.
+                  Escolha seus produtos direto pelo catálogo interativo ou acesse nosso <button onClick={() => setActiveTab("guide")} className="text-cyan-400 underline font-semibold hover:text-cyan-300">Radar Tech</button> para dicas exclusivas.
                 </p>
 
-                {/* WIDGETS PEQUENOS DE LOCALIZAÇÃO E ENTREGA */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl mt-2">
-                  <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-left">
-                    <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 shrink-0">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-500 block">Base Operacional</span>
-                      <span className="text-xs font-semibold text-white">Vitória da Conquista - BA</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-left">
-                    <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 shrink-0">
-                      <Truck className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-500 block">Modalidade</span>
-                      <span className="text-xs font-semibold text-white">Entrega em Toda a Cidade</span>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left w-full max-w-2xl mt-4">
-                  <div className="bg-slate-900/90 border border-cyan-500/35 hover:border-cyan-400/60 p-4 rounded-2xl flex items-start gap-3.5 shadow-xl transition group">
+                  <div className="bg-slate-900/90 border border-cyan-500/30 hover:border-cyan-400/60 p-4 rounded-2xl flex items-start gap-3.5 shadow-xl transition group">
                     <div className="p-2.5 bg-cyan-500/10 rounded-xl text-cyan-400 group-hover:scale-110 transition shrink-0">
                       <Video className="w-5 h-5" />
                     </div>
@@ -243,13 +226,13 @@ export default function Store() {
                     </div>
                   </div>
 
-                  <div className="bg-slate-900/90 border border-emerald-500/35 hover:border-emerald-400/60 p-4 rounded-2xl flex items-start gap-3.5 shadow-xl transition group">
+                  <div className="bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400/60 p-4 rounded-2xl flex items-start gap-3.5 shadow-xl transition group">
                     <div className="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-400 group-hover:scale-110 transition shrink-0">
                       <Users className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="font-bold text-xs text-slate-100 uppercase tracking-wide">Revenda & Atacado</h4>
-                      <p className="text-xs text-slate-400 mt-1">Condições e margens diferenciadas para lojistas e revendedores em toda a região.</p>
+                      <p className="text-xs text-slate-400 mt-1">Condições e margens diferenciadas para lojistas e revendedores em todo o país.</p>
                     </div>
                   </div>
                 </div>
@@ -391,7 +374,7 @@ export default function Store() {
                 <span className="text-xs font-black text-cyan-400 uppercase tracking-widest bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full">Radar Tecnológico</span>
                 <h3 className="text-3xl md:text-4xl font-black text-slate-100">Guia Oficial & Dicas Inteligentes</h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  Tudo o que você precisa saber para escolher o acessório perfeito para o seu dia a dia ou para iniciar suas vendas no atacado com margens garantidas em Vitória da Conquista e região.
+                  Tudo o que você precisa saber para escolher o acessório perfeito para o seu dia a dia ou para iniciar suas vendas no atacado com margens garantidas.
                 </p>
               </div>
             </div>
@@ -417,14 +400,14 @@ export default function Store() {
                 <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">03</div>
                 <h4 className="font-bold text-slate-100 text-base">Vantagens para Atacado</h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Lojistas e revendedores contam com preços sob medida e suporte dedicado para alavancar vendas na região. Fale com um consultor comercial direto.
+                  Lojistas e revendedores contam com preços sob medida e suporte dedicado para alavancar vendas na sua região. Fale com um consultor comercial direto.
                 </p>
               </div>
             </div>
 
             <div className="text-center pt-6">
               <button
-                onClick={() => openWhatsAppGeneral("Olá! Li o Radar Tech no site da MundoTech.ig e quero tirar dúvidas sobre os produtos e entrega em Vitória da Conquista.")}
+                onClick={() => openWhatsAppGeneral("Olá! Li o Radar Tech no site da MundoTech.ig e quero tirar dúvidas sobre os produtos.")}
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:opacity-90 text-slate-950 font-black py-3.5 px-8 rounded-2xl text-sm transition shadow-lg shadow-emerald-500/20 inline-flex items-center gap-2"
               >
                 <MessageCircle className="w-5 h-5 text-slate-950" /> Conversar com Especialista no WhatsApp <ArrowRight className="w-4 h-4" />
@@ -511,7 +494,7 @@ export default function Store() {
               </div>
 
               <div className="mt-4 space-y-3 bg-slate-950 p-4 rounded-2xl border border-slate-800">
-                <p className="text-xs font-bold text-cyan-300">⚡ Informações para entrega em Conquista:</p>
+                <p className="text-xs font-bold text-cyan-300">⚡ Informações para o atendimento rápido:</p>
                 <input
                   type="text"
                   placeholder="Seu Nome Completo"
@@ -568,8 +551,8 @@ export default function Store() {
 
       {/* Rodapé Futurista */}
       <footer className="bg-slate-900 border-t border-slate-800 mt-12 py-8 px-4 text-center text-xs text-slate-500 space-y-2">
-        <p className="font-bold text-slate-400">MundoTech.ig © 2026 — Online 24H</p>
-        <p>Tecnologia de ponta, atendimento transparente e entrega rápida em Vitória da Conquista - BA.</p>
+        <p className="font-bold text-slate-400">MundoTech.ig © 2026 — Next-Gen Electronics</p>
+        <p>Tecnologia de ponta, atendimento transparente e preço justo.</p>
       </footer>
     </div>
   );
