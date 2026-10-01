@@ -112,7 +112,7 @@ export default function Store() {
                 </div>
                 <span className="text-slate-600 text-[10px]">•</span>
                 <span className="text-[9px] text-cyan-300/90 font-medium tracking-wide">
-                  Localização em Vitória da Conquista • Entrega Rápida
+                  Localização em Vitória da Conquista 
                 </span>
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function Store() {
                 </span>
                 
                 <h2 className="text-3xl md:text-5xl font-black text-slate-100 leading-tight">
-                  Inovação, estilo e preço imbatível na <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">MundoTech</span>
+                  Inovação, estilo e preço imbatível  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">MundoTech</span>
                 </h2>
 
                 <p className="text-slate-400 text-sm max-w-xl">
@@ -410,7 +410,7 @@ export default function Store() {
                 onClick={() => openWhatsAppGeneral("Olá! Li o Radar Tech no site da MundoTech.ig e quero tirar dúvidas sobre os produtos.")}
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:opacity-90 text-slate-950 font-black py-3.5 px-8 rounded-2xl text-sm transition shadow-lg shadow-emerald-500/20 inline-flex items-center gap-2"
               >
-                <MessageCircle className="w-5 h-5 text-slate-950" /> Conversar com Especialista no WhatsApp <ArrowRight className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5 text-slate-950" /> Conversar com Vendedor <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -551,7 +551,7 @@ export default function Store() {
 
       {/* Rodapé Futurista */}
       <footer className="bg-slate-900 border-t border-slate-800 mt-12 py-8 px-4 text-center text-xs text-slate-500 space-y-2">
-        <p className="font-bold text-slate-400">MundoTech.ig © 2026 — Next-Gen Electronics</p>
+        <p className="font-bold text-slate-400">MundoTech.ig © 2026 —  Electronicos</p>
         <p>Tecnologia de ponta, atendimento transparente e preço justo.</p>
       </footer>
     </div>
